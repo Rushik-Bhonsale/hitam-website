@@ -1,0 +1,178 @@
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #4b5563;
+    }
+
+
+#side-nav {
+  width: 200px;
+  background-color: #4CAF50;
+  height: 100vh;
+  padding-top: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#side-nav.show {
+  transform: translateX(0);
+  position: fixed;
+}
+
+#side-nav nav {
+  display: flex;
+  flex-direction: column;
+}
+
+    nav a {
+      color: #d1d5db;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      background-color: #43a047;
+      color: white;
+    }
+
+    .main-content {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+body.nav-open .main-content {
+  margin-left: 200px;
+}
+
+    header {
+      background-color: #4CAF50;
+      color: #d1d5db;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+      border-radius: 10px;
+      background-color: white;
+      padding: 5px;
+    }
+
+    .ai-banner {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .ai-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .dashboard {
+      margin-left: 0;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      color: #001f3f;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .login-form, .clubs-section {
+      padding: 2rem;
+    }
+
+    .login-form input, .login-form button {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.75rem;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .login-form button {
+      background-color: #001f3f;
+      color: white;
+      cursor: pointer;
+    }
+
+    .clubs-section h2 {
+      color: #001f3f;
+      font-size: 28px;
+      margin-top: 2rem;
+    }
+
+    .clubs-section p {
+      font-size: 16px;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      color: #374151;
+    }
+
+    .club-img-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #e5e7eb;
+      border: 2px dashed #9ca3af;
+      border-radius: 12px;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-style: italic;
+    }
+/* Hamburger menu toggle inside header */
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-left: 12px;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
